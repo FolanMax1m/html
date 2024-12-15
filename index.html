@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="header-section nav-header">
             <img src="images/svg/site-logo.svg" alt="site-logo">
             <nav class="navigation">
                 <ul class="nav-link-wrapper">
@@ -21,22 +21,69 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <div>
-                <h1 class="main-title ">
-                    Аренда <span>экслюзивных</span> авто в Крыму
-                </h1>
-                <ul class="text">
-                    <li>Доставка в любую точку Крыма</li>
-                    <li>Бесплатно доп. аксессуары</li>
-                    <li>Любой способ оплаты</li>
-                </ul>
-                <a href="#">Выбрать авто</a>
-            </div>
-        </main>
-        <footer>
-            <p>© 2024 Автосалон "RCRent". Всі права захищені.</p>
-        </footer>
     </div>
+    <main class="main-section relative">
+        <div class="main-content-wrapper container">
+            <h1 class="main-title yellow-span italic">
+                Аренда <span>экслюзивных</span> авто в Крыму
+            </h1>
+            <ul class="main-advantages-wrapper">
+                <li>Доставка в любую точку Крыма</li>
+                <li>Бесплатно доп. аксессуары</li>
+                <li>Любой способ оплаты</li>
+            </ul>
+            <a class="btn btn-yellow-glow flex justify-center items-center bold" href="#">Выбрать авто</a>
+        </div>
+        <div class="main-car-image relative">
+            <img src="./images/yellow-bmw-main.png" alt="main yellow bmw">
+            <div class="main-glow-ellipse"></div>
+        </div>
+    </main>
+   <div class="container">
+       <section class="auto-park-section">
+           <h2 class="primary-title yellow-span text-center italic">Наш <span>автопарк</span></h2>
+           <div class="auto-park-cards-wrapper grid">
+               <div class="auto-park-card w-full text-center border-r-10">
+                   <div class="auto-park-card-title-wrapper flex justify-center items-center small-bmw-logo">
+                       <h3 class="auto-park-card-title text-24 fw-normal">BMW <span>i 325</span> кабриолет</h3>
+                   </div>
+                   <img class="auto-park-card-car-img" src="./images/bmw-i-325-cabriolet-grey.png" alt="BMW i 325 кабриолет">
+                   <div class="auto-park-block-wrapper flex items-center justify-between">
+                       <div class="auto-park-block-icon">
+                           <div class="auto-park-icon relative">
+                               <img src="./images/svg/calendar-icon.svg" alt="Calendar">
+                               <p class="auto-park-icon-text auto-park-icon-text-year">2008</p>
+                           </div>
+                           <p>год</p>
+                       </div>
+                       <div class="auto-park-block-icon">
+                           <div class="auto-park-icon">
+                               <img src="./images/svg/gear-box-icon.svg" alt="gear box">
+                           </div>
+                           <p>автомат</p>
+                       </div>
+                       <div class="auto-park-block-icon relative">
+                           <div class="auto-park-icon">
+                               <img src="./images/svg/engine-icon.svg" alt="engine icon">
+                               <p class="auto-park-icon-text auto-park-icon-text-engine">2,5</p>
+                           </div>
+                           <p>204 л.с.</p>
+                       </div>
+                       <div class="auto-park-block-icon">
+                           <div class="auto-park-icon">
+                               <img src="./images/svg/fuel-icon.svg" alt="fuel icon">
+                           </div>
+                           <p>95</p>
+                       </div>
+                   </div>
+                   <p class="auto-card-price text-24 bold">от 4500 р. / сутки</p>
+                   <a class="btn btn-yellow-transparent text-24 w-full" href="#">Арендовать авто</a>
+               </div>
+           </div>
+       </section>
+       <footer class="footer">
+           <p>© 2024 Автосалон "RCRent". Всі права захищені.</p>
+       </footer>
+   </div>
 </body>
 </html>

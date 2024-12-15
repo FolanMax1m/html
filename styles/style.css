@@ -1,46 +1,141 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #0A0A09;
-    color: #9b9b9b;
+    color: #FFF;
 }
-
 *, ::before, ::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}   
-
+}
+img {
+    box-sizing: border-box;
+    max-width: 100%;
+}
 ul {
     list-style: none;
 }
-
 a {
     text-decoration: none;
     color:inherit;
     cursor: pointer;
 }
-
+/*------------------------------------------------------------------------------------*/
+.btn {
+    display: inline-block;
+    border-radius: 30px;
+}
+.btn-yellow-transparent {
+    border: 1px solid #ECD774;
+    box-shadow: 0px 0px 5px 0px #D6A500;
+    max-width: 280px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.btn-yellow-glow {
+    background: linear-gradient(280.1deg, #FFFFFF -23.59%, #DBB500 115.07%);
+    box-shadow: 0px 0px 20px 0px #D6A500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 252px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #000;
+}
+.bg-cover {
+    background-size: cover;
+}
+.text-24 {
+    font-size: 24px;
+    line-height: 24px;
+}
+.border-r-10 {
+    border-radius: 10px;
+}
+.primary-title {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+}
+.w-full {
+    width: 100%;
+}
+.yellow-span span {
+    color: #D4CC7B;
+}
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+.items-center {
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.text-center {
+    text-align: center;
+}
+.relative {
+    position: relative;
+}
+.fw-normal {
+    font-weight: 400;
+}
+.bold {
+    font-weight: 700;
+}
+.italic {
+    font-style: italic;
+}
 .container {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
-
+.main-content-wrapper {
+    padding-top: 116px;
+    padding-bottom: 240px;
+    background-image: url("../images/Crimea-main.png");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.main-advantages-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    font-size: 30px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
 .main-title {
     font-size: 60px;
-    font-style: italic;
     font-weight: 700;
     line-height: 70px;
-    padding-top: 117px;
-
 }
-
-.main-title span {
-    color: #D4CC7B;
+.main-car-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    right: 0;
+    z-index: -1;
 }
-
-header {
+.main-glow-ellipse {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(151.58deg, rgba(93, 190, 180, 0.8) 11.12%, rgba(49, 149, 145, 0.8) 106.42%);
+    backdrop-filter: blur(200px);
+    z-index: -1;
+    border-radius: 50%;
+}
+.nav-header {
     display: flex;
     justify-content: flex-start;
     gap: 100px;
@@ -48,28 +143,78 @@ header {
     padding-bottom: 12px;
     align-items: end;
 }
-
 .nav-link-wrapper {
     display: flex;
     justify-content: space-between;
     gap: 125px;
+    color: #FFFFFF66;
+}
+/*---------------------------------------------------------------------------------------*/
+.auto-park-section {
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+.auto-park-cards-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-top: 74px;
+    padding-bottom: 48px;
+}
+.auto-park-card {
+    border: 1px solid #7E7E7E66;
+    padding: 16px 20px 18px 20px;
+    box-shadow: 0px 4px 10px 0px #7C7C7C33;
+}
+.auto-park-card-title span {
+    color: #ECD774;
+}
+.auto-park-card-title-wrapper::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    margin-right: 14px;
+}
+.small-bmw-logo::before {
+    background-image: url("../images/svg/small-logo-bmw.svg");
+}
+.small-mercedes-logo::before {
+    background-image: url("../images/svg/fuel-icon.svg");
+}
+.auto-park-block-icon {
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.045em;
+    color: #B3B5B7;
+}
+.auto-park-icon-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.auto-park-card-car-img {
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+.auto-park-icon-text-year {
+    transform: translate(-50%, -40%);
+}
+.auto-park-icon-text-engine {
+    transform: translate(-50%, -70%);
+}
+.auto-card-price {
+    letter-spacing: -0.045em;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
-footer {
+
+
+
+
+.footer {
     margin: 0;
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
     font-size: 30px;
-    padding-top: 20px;
-    padding-bottom: 240px;
-}
-
-footer {
-    font-size: 30px;
-    
 }
 
