@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #0A0A09;
-    color: #fff;
+    color: #9b9b9b;
 }
 
 *, ::before, ::after {
@@ -26,14 +26,27 @@ a {
     padding: 0 20px;
 }
 
+
+.main-title {
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 70px;
+    padding-top: 117px;
+
+}
+
 .main-title span {
     color: #D4CC7B;
 }
 
-.flex {
+header {
     display: flex;
     justify-content: flex-start;
-    gap: 125px;
+    gap: 100px;
+    padding-top: 26px;
+    padding-bottom: 12px;
+    align-items: end;
 }
 
 .nav-link-wrapper {
@@ -45,3 +58,18 @@ a {
 footer {
     margin: 0;
 }
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 240px;
+}
+
+footer {
+    font-size: 30px;
+    
+}
+
