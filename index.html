@@ -487,38 +487,57 @@
            <p>© 2024 Автосалон "RCRent Avto". Всі права захищені.</p>
        </footer>
    </div>
-    <h1 id="title">Заголовок</h1>
-    <div id="container">Контейнер</div>
     <div class="control-panel">
-        <h3>Панель керування</h3>
-        <!-- Зміна кольору тексту -->
-        <button onclick="changeTextColor('red')">Червоний текст</button>
-        <button onclick="changeTextColor('blue')">Синій текст</button>
-        
+        <h2>Style Control Panel</h2>
+
+        <!-- Керування кольором тексту -->
+        <div>
+            <label>Change Text Color:</label>
+            <button class="color-btn" data-color="red">Red</button>
+            <button class="color-btn" data-color="blue">Blue</button>
+            <button class="color-btn" data-color="green">Green</button>
+        </div>
+
         <!-- Зміна розміру шрифту -->
-        <label for="fontSize">Розмір шрифту:</label>
-        <select id="fontSize" onchange="changeFontSize()">
-        <option value="16px">16px</option>
-        <option value="20px">20px</option>
-        <option value="24px">24px</option>
-        </select>
+        <div>
+            <label for="font-size">Font Size:</label>
+            <select id="font-size">
+                <option value="16px">16px</option>
+                <option value="20px">20px</option>
+                <option value="24px">24px</option>
+                <option value="28px">28px</option>
+            </select>
+        </div>
 
-        <!-- Зміна розмірів контейнера -->
-        <label for="widthRange">Ширина:</label>
-        <input type="range" id="widthRange" min="100" max="500" value="300" onchange="changeContainerSize()">
-        <label for="heightRange">Висота:</label>
-        <input type="range" id="heightRange" min="100" max="500" value="200" onchange="changeContainerSize()">
-        
+        <!-- Зміна ширини та висоти -->
+        <div>
+            <label for="width">Change Width:</label>
+            <input type="range" id="width" min="100" max="500" value="300">
+        </div>
+
+        <div>
+            <label for="height">Change Height:</label>
+            <input type="range" id="height" min="100" max="500" value="200">
+        </div>
+
         <!-- Зміна кольору фону -->
-        <button onclick="changeBackgroundColor('lightblue')">Синій фон</button>
-        <button onclick="changeBackgroundColor('lightgreen')">Зелений фон</button>
+        <div>
+            <label>Background Color:</label>
+            <button class="bg-btn" data-color="#f8f9fa">Light</button>
+            <button class="bg-btn" data-color="#333">Dark</button>
+        </div>
 
-        <!-- Зміна фонового зображення -->
-        <button onclick="changeBackgroundImage()">Фонове зображення</button>
-        
-        <!-- Поле для власних значень -->
-        <label for="customInput">Користувацьке CSS:</label>
-        <input type="text" id="customInput" placeholder="Наприклад, color: green;" oninput="applyCustomStyle()">
+        <!-- Додавання власних значень -->
+        <div>
+            <label for="custom-css">Custom Style:</label>
+            <input type="text" id="custom-css" placeholder="Enter CSS (e.g., color: purple)">
+            <button id="apply-style">Apply</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Change My Style!</h1>
+        <p>This is a sample paragraph. Use the panel to change my style.</p>
     </div>
    <script src="script.js"></script>
 </body>
