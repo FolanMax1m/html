@@ -1,50 +1,43 @@
-const content = document.querySelector('.content');
-const heading = document.querySelector('.content h1');
-const paragraph = document.querySelector('.content p');
-
-// Зміна кольору тексту
-const colorButtons = document.querySelectorAll('.color-btn');
-colorButtons.forEach(button => {
+document.querySelectorAll('.color-btn').forEach(button => {
     button.addEventListener('click', () => {
         const color = button.dataset.color;
-        heading.style.color = color;
-        paragraph.style.color = color;
+        document.querySelector('.content').style.color = color;
     });
 });
 
 // Зміна розміру шрифту
-const fontSizeSelector = document.getElementById('font-size');
-fontSizeSelector.addEventListener('change', () => {
-    const fontSize = fontSizeSelector.value;
-    heading.style.fontSize = fontSize;
-    paragraph.style.fontSize = fontSize;
+document.getElementById('font-size').addEventListener('change', (event) => {
+    const fontSize = event.target.value;
+    document.querySelector('.content').style.fontSize = fontSize;
 });
 
 // Зміна ширини
-const widthSlider = document.getElementById('width');
-widthSlider.addEventListener('input', () => {
-    content.style.width = `${widthSlider.value}px`;
+document.getElementById('width').addEventListener('input', (event) => {
+    const width = event.target.value + 'px';
+    document.querySelector('.content').style.width = width;
 });
 
 // Зміна висоти
-const heightSlider = document.getElementById('height');
-heightSlider.addEventListener('input', () => {
-    content.style.height = `${heightSlider.value}px`;
+document.getElementById('height').addEventListener('input', (event) => {
+    const height = event.target.value + 'px';
+    document.querySelector('.content').style.height = height;
 });
 
 // Зміна кольору фону
-const bgButtons = document.querySelectorAll('.bg-btn');
-bgButtons.forEach(button => {
+document.querySelectorAll('.bg-btn').forEach(button => {
     button.addEventListener('click', () => {
         const bgColor = button.dataset.color;
-        content.style.backgroundColor = bgColor;
+        document.querySelector('.content').style.backgroundColor = bgColor;
     });
 });
 
 // Додавання власних стилів
-const customCssInput = document.getElementById('custom-css');
-const applyStyleButton = document.getElementById('apply-style');
-applyStyleButton.addEventListener('click', () => {
-    const customStyle = customCssInput.value;
-    content.style.cssText += customStyle;
+document.getElementById('apply-style').addEventListener('click', () => {
+    const customStyle = document.getElementById('custom-css').value;
+    const content = document.querySelector('.content');
+    try {
+        content.style.cssText += customStyle;
+    } catch (error) {
+        alert('Invalid CSS style');
+    }
 });
