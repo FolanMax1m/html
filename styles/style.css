@@ -1,5 +1,9 @@
+:root {
+    --cyan-color: #5DBEB4;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Muller", sans-serif;
     background-color: #0A0A09;
     color: #FFF;
 }
@@ -17,7 +21,7 @@ ul {
 }
 a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
     cursor: pointer;
 }
 /*------------------------------------------------------------------------------------*/
@@ -60,11 +64,17 @@ a {
 .w-full {
     width: 100%;
 }
+.cursor-pointer {
+    cursor: pointer;
+}
 .yellow-span span {
     color: #D4CC7B;
 }
 .flex {
     display: flex;
+}
+.flex-col {
+    flex-direction: column;
 }
 .grid {
     display: grid;
@@ -94,7 +104,7 @@ a {
     font-style: italic;
 }
 .container {
-    max-width: 1170px;
+    max-width: 1210px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -131,13 +141,11 @@ a {
     position: absolute;
     top: 0;
     background: linear-gradient(151.58deg, rgba(93, 190, 180, 0.8) 11.12%, rgba(49, 149, 145, 0.8) 106.42%);
-    backdrop-filter: blur(200px);
+    filter: blur(200px);
     z-index: -1;
     border-radius: 50%;
 }
 .nav-header {
-    display: flex;
-    justify-content: flex-start;
     gap: 100px;
     padding-top: 26px;
     padding-bottom: 12px;
@@ -216,132 +224,21 @@ a {
     margin-top: 24px;
     margin-bottom: 24px;
 }
-
-/*------------------------------------------------------------------------------------*/
-  body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    margin: 0;
-  }
-  
-  #container {
-    width: 300px;
-    height: 200px;
-    margin: 20px auto;
-    text-align: center;
-    background-color: lightgray;
-    border: 2px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .control-panel {
-    margin: 20px auto;
-    text-align: center;
-  }
-  
-  label {
-    margin-right: 10px;
-  }
-  
-  button, input, select {
-    margin: 5px;
-    padding: 5px 10px;
-    font-size: 14px;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  h3 {
-    margin-bottom: 10px;
-  }
 /*----------------------------------------------------------------------------*/
-
-header {
-	display: flex;
-	justify-content: flex-end;
-}
-.menu-btn {
-	width: 30px;
-	height: 30px;
-	position: relative;
-	z-index:2;
-	overflow: hidden;
-}
-.menu-btn span {
-	width: 30px;
-	height: 2px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #222222;
-	transition: all 0.5s;
-}
-.menu-btn span:nth-of-type(2) {
-	top: calc(50% - 5px);
-}
-.menu-btn span:nth-of-type(3) {
-	top: calc(50% + 5px);
-}
-
-.menu {	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	padding: 15px;
-  background: #FFEFBA;
-	transform: translateX(-100%);
-	transition: transform 0.5s; 
-}
-.menu.active {
-	transform: translateX(0);
-}
-.menu li {
-	list-style-type: block;
-}
-
-.menu-btn.active span:nth-of-type(1) {  display: block;
-}
-.menu-btn.active span:nth-of-type(2) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(45deg);  
-}
-.menu-btn.active span:nth-of-type(3) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(-45deg); 
-}
-
-/*-------------------------------------------------------------------------------*/
 a:hover {
-    color: rgb(80, 80, 80); /* Змінюється колір тексту при наведенні */
+    color: rgb(80, 80, 80);
 }
-
 button:hover {
-    background-color: rgb(194, 194, 194); /* Кнопка змінює колір фону */
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background-color: rgb(194, 194, 194);
 }
 
 .control-panel {
-    background-color: #f4f4f4;
     padding: 20px;
     border-bottom: 1px solid #ddd;
 }
-
 .control-panel h2 {
     margin-top: 0;
 }
-
 .control-panel div {
     margin-bottom: 15px;
 }
@@ -361,11 +258,6 @@ input, select, button {
     cursor: pointer;
 }
 
-button {
-    border: none;
-    border-radius: 4px;
-}
-
 .color-btn, .bg-btn {
     background-color: #007bff;
     color: white;
@@ -379,4 +271,104 @@ button {
     margin: 0;
     font-size: 30px;
 }
-
+/*---------------------------------------------------------------------*/
+.menu {
+    margin-right: 30px;
+}
+.menu-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 4;
+}
+.menu-icon span {
+    width: 26px;
+    height: 2px;
+    background-color: var(--cyan-color);
+    position: absolute;
+    left: calc(50% - 13px);
+    transition: all 0.2s linear;
+}
+.menu-icon span:first-child {
+    top: 20%;
+}
+.menu-icon span:nth-child(2) {
+    top: calc(50% - 1px);
+}
+.menu-icon span:last-child {
+    bottom: 20%;
+}
+#menu-toggle {
+    opacity: 0;
+    position: absolute;
+}
+#menu-toggle:checked ~ .menu-icon span {
+    top: calc(50% - 1px);
+    background-color: var(--cyan-color);
+}
+#menu-toggle:checked ~ .menu-icon span:first-child {
+    transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+#menu-toggle:checked ~ .menu-icon span:last-child {
+    transform: rotate(-45deg);
+}
+.menu-items {
+    max-width: 600px;
+    gap: 24px
+}
+.burger-logo {
+    width: 78px;
+    height: 98px;
+    margin-bottom: 28px;
+}
+.burger-arrow {
+    width: 12px;
+    height: 16px;
+    cursor: pointer;
+}
+.burger-arrow li:first-child, .burger-arrow li:last-child {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    background-color: black;
+}
+.burger-arrow li:first-child {
+    top: 3px;
+    transform: rotate(45deg);
+}
+.burger-arrow li:last-child {
+    bottom: 3px;
+    transform: rotate(-45deg);
+}
+.burger-bg {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #121214CC;
+    z-index: 3;
+    padding: 11px 20px;
+    flex-direction: column;
+}
+.menu-items a {
+    color: #FFF;
+    font-size: 26px;
+    font-weight: 700;
+}
+#menu-toggle:checked ~ .burger-bg {
+    display: flex;
+}
+#menu-toggle:checked ~ .menu-icon {
+    position: fixed;
+}
+.burger-call-me {
+    max-width: 207px;
+    margin-top: 55px;
+}

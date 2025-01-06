@@ -4,40 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css"> 
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <div class="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="#">Наш парк</a></li>
-                    <li><a href="#">Умови орендування</a></li>
-                    <li><a href="#">Відгуки</a></li>
-                    <li><a href="#">Контакти</a></li>
-                    <li><a href="#">+380957260939</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
     <div class="container">
-        <header class="header-section nav-header">
+        <header class="header-section nav-header flex justify-between">
             <img src="images/svg/site-logo.svg" alt="site-logo">
-            <nav class="navigation">
-                <ul class="nav-link-wrapper">
-                    <li class="nav-link-item"><a href="https://www.figma.com/design/EAIQRbfmANXYxMy9HQlBZe/Rcrent-%D0%BC%D0%BE%D0%B1.-(Copy)?node-id=617-615&t=2cLgvPv893CmXQRC-0" target="_blank">Наш парк</a></li>
-                    <li class="nav-link-item"><a href="https://www.figma.com/design/EAIQRbfmANXYxMy9HQlBZe/Rcrent-%D0%BC%D0%BE%D0%B1.-(Copy)?node-id=617-615&t=2cLgvPv893CmXQRC-0" target="_blank">Условия аренды</a></li>
-                    <li class="nav-link-item"><a href="https://www.figma.com/design/EAIQRbfmANXYxMy9HQlBZe/Rcrent-%D0%BC%D0%BE%D0%B1.-(Copy)?node-id=617-615&t=2cLgvPv893CmXQRC-0" target="_blank">Отзывы</a></li>
-                    <li class="nav-link-item"><a href="https://www.figma.com/design/EAIQRbfmANXYxMy9HQlBZe/Rcrent-%D0%BC%D0%BE%D0%B1.-(Copy)?node-id=617-615&t=2cLgvPv893CmXQRC-0" target="_blank">Контакты</a></li>
-                    <li class="nav-link-item"><a href="tel:+79781173839" target="_blank">+380957260939</a></li>
-                </ul>
+            <nav class="menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon cursor-pointer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="burger-bg flex flex-col items-center justify-center">
+                    <ul class="menu-items w-full flex flex-col text-center">
+                        <li class="menu-item"><a class="fw-500" href="#">Наш автопарк</a>
+                        </li>
+                        <li class="menu-item"><a class="fw-500" href="#">Условия аренды</a>
+                        </li>
+                        <li class="menu-item"><a class="fw-500" href="#">Отзывы</a>
+                        </li>
+                        <li class="menu-item"><a class="fw-500" href="#">Контакты</a>
+                        </li>
+                        <li class="menu-item"><a href="tel:+380957260939" target="_blank">+380957260939</a></li>
+                    </ul>
+                    <div>
+
+                    </div>
+                </div>
             </nav>
+
+
+
+
+
+
+
         </header>
     </div>
     <main class="main-section relative">
@@ -463,10 +468,13 @@
            <p>© 2024 Автосалон "RCRent Avto". Всі права захищені.</p>
        </footer>
    </div>
+
+
+
+
+
     <div class="control-panel">
         <h2>Style Control Panel</h2>
-
-        <!-- Керування кольором тексту -->
         <div>
             <label>Change Text Color:</label>
             <button class="color-btn" data-color="red">Red</button>
@@ -510,11 +518,11 @@
             <button id="apply-style">Apply</button>
         </div>
     </div>
-
     <div class="content">
         <h1>Change My Style!</h1>
         <p>This is a sample paragraph. Use the panel to change my style.</p>
     </div>
-   <script src="script.js"></script>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
