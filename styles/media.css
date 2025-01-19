@@ -1,0 +1,11 @@
+@media screen and (max-width: 500px) {
+    .auto-park-cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .login-wrapper .btn-login {
+        display: none;
+    }
+    .menu-items .menu-item:last-child {
+        display: block !important;
+    }
+}
