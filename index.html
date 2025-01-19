@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My site</title>
     <link rel="stylesheet" href="./fonts/fonts.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/media.css">
 </head>
 <body>
     <div class="container">
+        <div class="login-wrapper">
+            <button type="button" class="btn btn-primary btn-login position-fixed" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Login
+            </button>
+        </div>
         <header class="header-section nav-header flex justify-between">
             <img src="images/svg/site-logo.svg" alt="site-logo">
             <nav class="menu">
@@ -30,19 +37,17 @@
                         <li class="menu-item"><a class="fw-500" href="#">Контакти</a>
                         </li>
                         <li class="menu-item"><a href="tel:+380957260939" target="_blank">+380957260939</a></li>
+                        <li class="menu-item d-none">
+                            <button type="button" class="btn btn-primary btn-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Login
+                            </button>
+                        </li>
                     </ul>
                     <div>
 
                     </div>
                 </div>
             </nav>
-
-
-
-
-
-
-
         </header>
     </div>
     <main class="main-section relative">
@@ -468,11 +473,6 @@
            <p>© 2024 Автосалон "RCRent Avto". Всі права захищені.</p>
        </footer>
    </div>
-
-
-
-
-
     <div class="control-panel">
         <h2>Style Control Panel</h2>
         <div>
@@ -523,6 +523,38 @@
         <p>This is a sample paragraph. Use the panel to change my style.</p>
     </div>
 
+<!--     Modal -->
+    <div data-modal-authorization class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-transparent border-primary-subtle">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Authorization</h1>
+                    <button type="button" class="btn-close bg-info-subtle" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div data-form-authorization-status class="alert d-none" role="alert"></div>
+                    <form data-form-authorization>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input data-form-authorization-email type="email" class="form-control border" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input data-form-authorization-password type="password" class="form-control border" id="exampleInputPassword1">
+                        </div>
+                        <div class="modal-footer pb-0">
+                            <button type="submit" class="btn btn-primary">Enter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="./js/script.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
